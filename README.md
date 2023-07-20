@@ -1,4 +1,6 @@
 # GP8_Advance_Model
 control_real_time是放在小车上的发送端
+
 stimulate_real_time是放在电脑上的模拟发送端，用于调试
+
 group_server是放在电脑上的接收端，服务端
