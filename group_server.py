@@ -14,6 +14,7 @@ import os
 import logging
 from datetime import datetime
 
+
 # 设置 log 文件夹的路径
 log_dir = './log'
 
@@ -90,17 +91,46 @@ def Control_Car(p1, p2, p3, p4, cx, cy, yaw, FRAME_WIDTH, FRAME_HEIGHT, CENTER_X
     if aruco_ratio<0.02:
         if cx < CENTER_X-40:        
             motion_command = "d"  #"左转"
-            bias="q"
+            bias="e"
         elif cx > CENTER_X+40:            
             motion_command ="a" #"右转"
-            bias="e"
+            bias="q"
         else:
             motion_command ="w" #"前进"
     else:
         should_stop=True
         motion_command = "m"#"停车"
-    print("运动指令",motion_command)
+    # print("运动指令",motion_command)
     return motion_command,bias,should_stop
+
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import time
+
+class MyHandler(FileSystemEventHandler):
+    def __init__(self, marker_server,target_file):
+        self.target_file = target_file
+        self.last_content = self.read_file_content()
+        self.marker_server= marker_server
+
+    def read_file_content(self):
+        try:
+            with open(self.target_file, 'r',encoding="utf-8") as file:
+                return file.read()
+        except FileNotFoundError:
+            return None
+
+    def on_modified(self, event):
+        if event.src_path == self.target_file:
+            new_content = self.read_file_content()
+            if new_content != self.last_content:
+                print(f'File {event.src_path} content has been modified, new content is:')
+                print(new_content)
+                self.last_content = new_content
+                self.marker_server.motor_command_func(new_content)
+       
+        
+
 
 
 
@@ -124,7 +154,24 @@ class MarkerServer:
         self.last_state=None
         self.bias="a"
         self.marker_list=list(range(50))
+        del self.marker_list[16]
         self.loss_frame_threshold=30
+        self.return_marker=10
+        self.return_flag=False
+        self.motor_command_flag=False
+        self.motor_command=""
+        command_file_path="motor_command/motor_command.txt"
+        abs_command_file_path=os.path.abspath(command_file_path)   
+        self.motor_command_listener= MyHandler(self,abs_command_file_path)
+        self.observer = Observer()
+        self.observer.schedule(self.motor_command_listener, os.path.dirname(abs_command_file_path))
+        self.observer.start()
+    
+    def motor_command_func(self,motor_command):
+        print("收到运动指令",motor_command)
+        self.motor_command_flag=True
+        self.motor_command=motor_command
+        
     
     def global_info_func(self)->bool:
         if self.last_state!="global_info":
@@ -180,19 +227,20 @@ class MarkerServer:
             print("Camera calibration completed and saved to 'calibration_result.p'")
             return True
         
-    def detect_func(self)->Tuple[bool, int]:
+    def detect_func(self)->Tuple[int, int]:
         if self.last_state!="detect":
             print("进入检测状态")
             self.last_state="detect"
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY) 
         corners, ids, _ = aruco.detectMarkers(gray, aruco_dict)
         if type(ids)==type(None):
-            return False,-1
+            return 0,-1
         all_ids=[i[0] for i in ids]
         for i in all_ids:
             if i in self.marker_list:
-                return True,i
-        return False,-1
+                return 1,i
+        return 0,-1
+    
         
     
     def heading_func(self,heading_id)->Tuple[int, str]:
@@ -239,7 +287,7 @@ class MarkerServer:
             self.frame = cv2.putText(self.frame, f"C({cx:.1f}, {cy:.1f})", center, cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,0,0), 2)
             motion_command,self.bias,should_stop=Control_Car(corners[i][0][0], corners[i][0][1], corners[i][0][2], corners[i][0][3], cx, cy, None, self.FRAME_WIDTH, self.FRAME_HEIGHT, self.CENTER_X, self.CENTER_Y, self.YAW_THRESHOLD)
             if should_stop:
-                return 2,motion_command
+                return 2,motion_command #投喂目标
             else:
                 return 1,motion_command
             # # Estimate pose
@@ -314,6 +362,10 @@ class MarkerServer:
         
     def forward_a_frame(self,frame):
         motion_command="m"
+        if self.motor_command_flag:
+            self.conn.sendall(self.motor_command.encode())
+            self.motor_command_flag=False
+            return 
         self.frame=frame
         if self.state=="global_info":
             if self.global_info_func():
@@ -331,7 +383,7 @@ class MarkerServer:
                     self.marker_list.remove(self.heading_id)
             else:
                 print("所有目标已经投喂完毕")
-                sys.exit(0)
+                self.state="return"
                 
         elif self.state=="heading":
             result,motion_command=self.heading_func(self.heading_id)
@@ -347,14 +399,26 @@ class MarkerServer:
         elif self.state=="loss":
             result,motion_command=self.loss_func(self.heading_id)
             if result==1:
-                self.state="heading"
+                if not self.return_flag:
+                    self.state="heading"
+                else:
+                    self.state="return"
             elif result==2:
                 self.state="detect"
+        elif self.state=="return":
+            self.return_flag=True
+            result,motion_command=self.heading_func(self.heading_id)
+            if result==0:
+                self.state="loss"
+            elif result==2:
+                print("已返回到起点")
+                sys.exit(0)
             
         frame_reverse= cv2.flip(self.frame, 0).astype(np.uint8)
         cv2.imshow('frame', frame_reverse)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             sys.exit(0)
+        print("命令",motion_command)
         self.conn.sendall(motion_command.encode())
 
 def remove_outliers(data, axis=None):
