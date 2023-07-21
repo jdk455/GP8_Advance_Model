@@ -5,10 +5,24 @@ import sys
 import socket
 import cv2
 import numpy as np
+import time
 import struct
 import pickle
 from scipy.spatial.transform import Rotation as R
 from typing import Tuple
+import os
+import logging
+from datetime import datetime
+
+# 设置 log 文件夹的路径
+log_dir = './log'
+
+# 如果 log 文件夹不存在，则创建它
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+
+# 创建一个以当前时间为名字的 log 文件
+log_filename = datetime.now().strftime('%Y-%m-%d-%H-%M-%S.log')
 
 
 
@@ -23,6 +37,33 @@ criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
 # Define ArUco dictionary
 aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_50)
+
+
+import sys
+
+class Logger(object):
+    def __init__(self, filename="Default.log", cache_size=10):
+        self.terminal = sys.stdout
+        self.log = open(filename, "a",encoding="utf-8")
+        self.cache_size = cache_size
+        self.cache = []
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.cache.append(message)
+        if len(self.cache) >= self.cache_size:
+            self.flush()
+
+    def flush(self):
+        self.log.write(''.join(self.cache))
+        self.log.flush()  # 强制写入文件
+        self.cache = []
+
+    def __del__(self):
+        self.flush()
+        self.log.close()
+
+sys.stdout = Logger(os.path.join(log_dir, log_filename))
 
 def Control_Car(p1, p2, p3, p4, cx, cy, yaw, FRAME_WIDTH, FRAME_HEIGHT, CENTER_X, CENTER_Y, YAW_THRESHOLD)->Tuple[str,str,bool]: 
     # 计算ArUco码的宽度和高度
@@ -44,15 +85,15 @@ def Control_Car(p1, p2, p3, p4, cx, cy, yaw, FRAME_WIDTH, FRAME_HEIGHT, CENTER_X
     
     # 定义运动指令
     motion_command = "m"
-    bias="a"
+    bias="q"
     
-    if aruco_ratio<0.05:
-        if cx < CENTER_X-15:        
+    if aruco_ratio<0.02:
+        if cx < CENTER_X-40:        
             motion_command = "d"  #"左转"
-            bias="a"
-        elif cx > CENTER_X+15:            
+            bias="q"
+        elif cx > CENTER_X+40:            
             motion_command ="a" #"右转"
-            bias="d"
+            bias="e"
         else:
             motion_command ="w" #"前进"
     else:
@@ -69,6 +110,8 @@ class MarkerServer:
     def __init__(self,conn) -> None:
         self.conn=conn
         self.state="global_info"
+        self.global_info_frame_num=0
+        self.global_info_frame_num_threshold=10
         self.calibrate_samples_num=10
         self.calibrate_count=0
         # Prepare object points
@@ -79,20 +122,33 @@ class MarkerServer:
         self.imgpoints = [] # 2d points in image plane
         self.is_load_calibration_result=True
         self.last_state=None
-        self.bias="left"
+        self.bias="a"
         self.marker_list=list(range(50))
+        self.loss_frame_threshold=30
     
-    def global_info_func(self)->None:
+    def global_info_func(self)->bool:
         if self.last_state!="global_info":
             print("进入全局信息状态")
             self.last_state="global_info"
-        self.FRAME_HEIGHT, self.FRAME_WIDTH = self.frame.shape[:2]
-        self.CENTER_X, self.CENTER_Y = self.FRAME_WIDTH // 2, self.FRAME_HEIGHT // 2 
-        self.YAW_THRESHOLD = 10  # Adjust this value based on your specific situation
-        print("FRAME_HEIGHT",self.FRAME_HEIGHT)
-        print("FRAME_WIDTH",self.FRAME_WIDTH)
-        print("CENTER_X",self.CENTER_X)
-        print("CENTER_Y",self.CENTER_Y)
+            self.FRAME_HEIGHT, self.FRAME_WIDTH = self.frame.shape[:2]
+            self.CENTER_X, self.CENTER_Y = self.FRAME_WIDTH // 2, self.FRAME_HEIGHT // 2 
+            self.YAW_THRESHOLD = 10  # Adjust this value based on your specific situation
+            print("FRAME_HEIGHT",self.FRAME_HEIGHT)
+            print("FRAME_WIDTH",self.FRAME_WIDTH)
+            print("CENTER_X",self.CENTER_X)
+            print("CENTER_Y",self.CENTER_Y)
+            self.global_info_start_time=time.time()
+            return False
+        elif self.global_info_frame_num<self.global_info_frame_num_threshold:
+            self.global_info_frame_num+=1
+            return False
+        else:
+            self.global_info_end_time=time.time()
+            print("全局信息状态结束，平均每帧耗时",(self.global_info_end_time-self.global_info_start_time)/self.global_info_frame_num)
+            return True
+
+            
+        
         
     
     def calibrate_func(self)->bool:
@@ -130,7 +186,7 @@ class MarkerServer:
             self.last_state="detect"
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY) 
         corners, ids, _ = aruco.detectMarkers(gray, aruco_dict)
-        if ids==None:
+        if type(ids)==type(None):
             return False,-1
         all_ids=[i[0] for i in ids]
         for i in all_ids:
@@ -158,7 +214,7 @@ class MarkerServer:
         # cameraMatrix = self.calibration_result["cameraMatrix"]
         # distCoeffs = self.calibration_result["distCoeffs"]
         # If markers are detected
-        if ids==None:
+        if type(ids)==type(None):
 
             return 0,motion_command #没有找到目标
         all_ids=[i[0] for i in ids]
@@ -228,20 +284,29 @@ class MarkerServer:
             # motion_command_list=[]
             
         
-    def loss_func(self,heading_id)->Tuple[bool,str]:
+    def loss_func(self,heading_id)->Tuple[int,str]:
         if self.last_state!="loss":
             print("丢失目标",heading_id,"正在调整")
             self.last_state="loss"
+            self.loss_frame=0
+       
+        self.loss_frame+=1
+        print(self.loss_frame," 运动指令",self.bias)
+        if self.loss_frame>self.loss_frame_threshold:
+            self.marker_list.append(self.heading_id)
+            print("丢失目标",heading_id,"时间过长")
+            return 2,"m"
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY) 
         corners, ids, _ = aruco.detectMarkers(gray, aruco_dict)
-        if ids==None:
-            return False,self.bias
+        if type(ids)==type(None):
+            
+            return 0,self.bias
         
         # If markers are detected
         all_ids=[i[0] for i in ids]
         if heading_id in all_ids:
-            return True,"m"
-        return False,self.bias
+            return 1,"m"
+        return 0,self.bias
                 
         
                 
@@ -251,13 +316,14 @@ class MarkerServer:
         motion_command="m"
         self.frame=frame
         if self.state=="global_info":
-            self.global_info_func()
-            self.state="calibrate"
+            if self.global_info_func():
+                self.state="calibrate"
         elif self.state=="calibrate":
             if self.calibrate_func():
                 self.state="detect"
+                
         elif self.state=="detect":
-            motion_command="a"
+            motion_command="q"
             if len(self.marker_list)!=0:
                 result, self.heading_id=self.detect_func()
                 if result:
@@ -280,11 +346,13 @@ class MarkerServer:
         
         elif self.state=="loss":
             result,motion_command=self.loss_func(self.heading_id)
-            if result:
+            if result==1:
                 self.state="heading"
+            elif result==2:
+                self.state="detect"
             
-            
-        cv2.imshow('frame', self.frame)
+        frame_reverse= cv2.flip(self.frame, 0).astype(np.uint8)
+        cv2.imshow('frame', frame_reverse)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             sys.exit(0)
         self.conn.sendall(motion_command.encode())

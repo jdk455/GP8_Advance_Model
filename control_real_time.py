@@ -38,7 +38,7 @@ def press(key):
     ser.write(user.encode('utf-8'))
 
 def main():
-    server_address = ('192.168.137.142', 5001)
+    server_address = ('192.168.137.175', 5001)
     sender_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sender_socket.connect(server_address)
     cap = cv2.VideoCapture(0)  # 使用摄像头(通常为0)
