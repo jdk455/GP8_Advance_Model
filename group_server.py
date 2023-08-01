@@ -13,6 +13,7 @@ from typing import Tuple
 import os
 import logging
 from datetime import datetime
+import json
 
 
 # 设置 log 文件夹的路径
@@ -39,9 +40,11 @@ criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 # Define ArUco dictionary
 aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_4X4_50)
 
+Interrupt_flag=False
+Interrupt_data=""
+
 
 import sys
-
 class Logger(object):
     def __init__(self, filename="Default.log", cache_size=10):
         self.terminal = sys.stdout
@@ -89,10 +92,10 @@ def Control_Car(p1, p2, p3, p4, cx, cy, yaw, FRAME_WIDTH, FRAME_HEIGHT, CENTER_X
     bias="q"
     
     if aruco_ratio<0.02:
-        if cx < CENTER_X-40:        
+        if cx < CENTER_X-20:        
             motion_command = "d"  #"左转"
             bias="e"
-        elif cx > CENTER_X+40:            
+        elif cx > CENTER_X+20:            
             motion_command ="a" #"右转"
             bias="q"
         else:
@@ -155,7 +158,6 @@ class MarkerServer:
         self.bias="a"
         self.marker_list=list(range(50))
         del self.marker_list[16]
-        self.loss_frame_threshold=30
         self.return_marker=10
         self.return_flag=False
         self.motor_command_flag=False
@@ -168,7 +170,7 @@ class MarkerServer:
         self.observer.start()
     
     def motor_command_func(self,motor_command):
-        print("收到运动指令",motor_command)
+        print("收到电机转速改变指令",motor_command)
         self.motor_command_flag=True
         self.motor_command=motor_command
         
@@ -339,29 +341,40 @@ class MarkerServer:
             self.loss_frame=0
        
         self.loss_frame+=1
+       
         print(self.loss_frame," 运动指令",self.bias)
-        if self.loss_frame>self.loss_frame_threshold:
+        if self.loss_frame>20:
             self.marker_list.append(self.heading_id)
             print("丢失目标",heading_id,"时间过长")
             return 2,"m"
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY) 
         corners, ids, _ = aruco.detectMarkers(gray, aruco_dict)
         if type(ids)==type(None):
-            
-            return 0,self.bias
+            if self.loss_frame<10:
+                return 0,"m"
+            else:
+                return 0,self.bias
         
         # If markers are detected
         all_ids=[i[0] for i in ids]
         if heading_id in all_ids:
             return 1,"m"
-        return 0,self.bias
-                
+        if self.loss_frame<10:
+            return 0,"m"
+        else:
+            return 0,self.bias
         
                 
         
         
-    def forward_a_frame(self,frame):
+    def forward_a_frame(self,frame,status_code):
+        global Interrupt_flag,Interrupt_data
         motion_command="m"
+        if (Interrupt_flag):
+            print("收到中断指令",Interrupt_data)
+            motion_command=Interrupt_data.pop(0)
+            if len(Interrupt_data)==0:
+                Interrupt_flag=False
         if self.motor_command_flag:
             self.conn.sendall(self.motor_command.encode())
             self.motor_command_flag=False
@@ -393,9 +406,12 @@ class MarkerServer:
                 self.state="feed"
         
         elif self.state=="feed":
-             print("投喂目标",self.heading_id)
-             self.state="detect"
-        
+            print("投喂目标",self.heading_id)
+            self.conn.sendall("m".encode())
+            time.sleep(2)
+            self.state="detect"
+            return 
+            
         elif self.state=="loss":
             result,motion_command=self.loss_func(self.heading_id)
             if result==1:
@@ -446,6 +462,37 @@ server_address = ('0.0.0.0', 5001)
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server_socket.bind(server_address)
+import socket
+from multiprocessing import Process
+
+def start_server():
+    global Interrupt_flag
+    global Interrupt_data   
+    direction=["F","B","L","R","l","r"]
+    # 创建 socket 对象
+    serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # 绑定端口
+    serversocket.bind(("0.0.0.0",5002))
+    # 设置最大连接数，超过后排队
+    serversocket.listen(5)
+    while True:
+        # 建立客户端连接
+        clientsocket, addr = serversocket.accept()
+        # 接收客户端消息
+        data = clientsocket.recv(1024).decode('utf-8')
+        values = [int(i) for i in json.loads(data)]
+        if not Interrupt_flag:
+            Interrupt_data=""
+            for i,j in enumerate(values):
+                Interrupt_data+="M"+str(i%4)+direction[i//4]+"S"+str(j)+"\n"
+            Interrupt_data=Interrupt_data.rstrip()
+            Interrupt_flag=True
+            clientsocket.close()
+        else :
+            clientsocket.close()
+# 创建并启动新的进程来运行服务器
+# p = Process(target=start_server)
+# p.start()
 
 
 # 开始监听
@@ -461,15 +508,15 @@ marker_server=MarkerServer(conn)
 while True:
     # 接收图像数据长度
     length = struct.unpack('<L', recvall(conn, 4))[0]
-
     # 接收图像数据
     frame_data = recvall(conn, length)
-
     # 将字节串转换为numpy数组并解码
     frame = cv2.imdecode(np.frombuffer(frame_data, dtype=np.uint8), cv2.IMREAD_COLOR)
+    status_code=conn.recv(1024).decode()
+    print("状态码",status_code," ",end="")
     # frame_reverse= cv2.flip(frame, 0).astype(np.uint8)
     # 显示图像
-    marker_server.forward_a_frame(frame)
+    marker_server.forward_a_frame(frame,status_code)
     # print("frame.shape",frame.shape)
     # cv2.imshow('frame', frame)
     # cv2.waitKey(10)

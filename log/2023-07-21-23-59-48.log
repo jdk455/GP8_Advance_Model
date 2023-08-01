@@ -1,0 +1,755 @@
+等待连接...
+连接到：('192.168.137.36', 57020)
+状态码 a  进入全局信息状态
+FRAME_HEIGHT 480
+FRAME_WIDTH 640
+CENTER_X 320
+CENTER_Y 240
+命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  命令 m
+状态码 a  全局信息状态结束，平均每帧耗时 0.1440204381942749
+命令 m
+状态码 a  进入标定状态
+Camera calibration result loaded from 'calibration_result.p'
+命令 m
+状态码 a  进入检测状态
+命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  进入前进状态，寻找目标 37
+命令 m
+状态码 a  丢失目标 37 正在调整
+1  运动指令 a
+命令 m
+状态码 a  2  运动指令 a
+命令 m
+状态码 a  3  运动指令 a
+命令 m
+状态码 a  4  运动指令 a
+命令 m
+状态码 a  5  运动指令 a
+命令 m
+状态码 a  6  运动指令 a
+命令 m
+状态码 a  7  运动指令 a
+命令 m
+状态码 a  8  运动指令 a
+命令 m
+状态码 a  9  运动指令 a
+命令 m
+状态码 a  10  运动指令 a
+命令 a
+状态码 a  11  运动指令 a
+命令 a
+状态码 a  12  运动指令 a
+命令 a
+状态码 a  13  运动指令 a
+命令 a
+状态码 a  14  运动指令 a
+命令 a
+状态码 a  15  运动指令 a
+命令 a
+状态码 a  16  运动指令 a
+命令 a
+状态码 a  17  运动指令 a
+命令 a
+状态码 a  18  运动指令 a
+命令 a
+状态码 a  19  运动指令 a
+命令 a
+状态码 a  20  运动指令 a
+命令 a
+状态码 a  21  运动指令 a
+丢失目标 37 时间过长
+命令 m
+状态码 a  进入检测状态
+命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 a  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 a
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 a
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 a
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  3  运动指令 a
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 a
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(343.8, 266.5) P1(353.0, 276.0), P2(335.0, 276.0), P3(335.0, 257.0), P4(352.0, 257.0)  
+aruco_ratio 0.0011148222287495932
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(343.5, 266.8) P1(353.0, 276.0), P2(335.0, 276.0), P3(334.0, 258.0), P4(352.0, 257.0)  
+aruco_ratio 0.0011148222287495932
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(344.0, 266.0) P1(353.0, 276.0), P2(335.0, 276.0), P3(334.0, 257.0), P4(354.0, 255.0)  
+aruco_ratio 0.0012318631013234457
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(344.0, 266.2) P1(353.0, 276.0), P2(335.0, 276.0), P3(334.0, 258.0), P4(354.0, 255.0)  
+aruco_ratio 0.0012318631013234457
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  3  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  3  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(306.8, 269.5) P1(317.0, 279.0), P2(297.0, 279.0), P3(297.0, 260.0), P4(316.0, 260.0)  
+aruco_ratio 0.0012386913100878398
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(307.2, 269.2) P1(317.0, 279.0), P2(297.0, 280.0), P3(297.0, 260.0), P4(318.0, 258.0)  
+aruco_ratio 0.0013704465826352436
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(306.0, 269.8) P1(316.0, 279.0), P2(297.0, 280.0), P3(296.0, 260.0), P4(315.0, 260.0)  
+aruco_ratio 0.0011783855160077412
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.2, 269.2) P1(317.0, 279.0), P2(297.0, 280.0), P3(297.0, 260.0), P4(318.0, 258.0)  
+aruco_ratio 0.0013704465826352436
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.2, 269.5) P1(317.0, 280.0), P2(297.0, 280.0), P3(297.0, 260.0), P4(318.0, 258.0)  
+aruco_ratio 0.001433770457903544
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.2, 269.5) P1(317.0, 280.0), P2(297.0, 280.0), P3(297.0, 260.0), P4(318.0, 258.0)  
+aruco_ratio 0.001433770457903544
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.2, 269.5) P1(317.0, 280.0), P2(297.0, 280.0), P3(297.0, 260.0), P4(318.0, 258.0)  
+aruco_ratio 0.001433770457903544
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.2, 269.5) P1(317.0, 280.0), P2(297.0, 280.0), P3(297.0, 260.0), P4(318.0, 258.0)  
+aruco_ratio 0.001433770457903544
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(306.8, 269.0) P1(316.0, 279.0), P2(297.0, 279.0), P3(296.0, 260.0), P4(318.0, 258.0)  
+aruco_ratio 0.0013047051429748535
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.0, 269.5) P1(317.0, 279.0), P2(298.0, 279.0), P3(297.0, 260.0), P4(316.0, 260.0)  
+aruco_ratio 0.0011767567197481792
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(306.8, 269.5) P1(317.0, 279.0), P2(297.0, 279.0), P3(297.0, 260.0), P4(316.0, 260.0)  
+aruco_ratio 0.0012386913100878398
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.5, 269.8) P1(317.0, 279.0), P2(299.0, 280.0), P3(297.0, 260.0), P4(317.0, 260.0)  
+aruco_ratio 0.0011149978637695313
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(306.5, 269.8) P1(317.0, 279.0), P2(297.0, 280.0), P3(296.0, 260.0), P4(316.0, 260.0)  
+aruco_ratio 0.0012402387460072836
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(306.2, 268.8) P1(316.0, 278.0), P2(297.0, 279.0), P3(296.0, 259.0), P4(316.0, 259.0)  
+aruco_ratio 0.0011767567197481792
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(306.5, 268.0) P1(316.0, 278.0), P2(297.0, 278.0), P3(297.0, 258.0), P4(316.0, 258.0)  
+aruco_ratio 0.0012369791666666666
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.0, 268.5) P1(317.0, 279.0), P2(297.0, 279.0), P3(296.0, 259.0), P4(318.0, 257.0)  
+aruco_ratio 0.001433770457903544
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(308.0, 269.0) P1(318.0, 279.0), P2(298.0, 279.0), P3(298.0, 259.0), P4(318.0, 259.0)  
+aruco_ratio 0.0013020833333333333
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(308.5, 268.0) P1(319.0, 278.0), P2(299.0, 278.0), P3(298.0, 258.0), P4(318.0, 258.0)  
+aruco_ratio 0.0013037099440892537
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(308.2, 266.0) P1(319.0, 276.0), P2(298.0, 276.0), P3(298.0, 256.0), P4(318.0, 256.0)  
+aruco_ratio 0.0013688953717549642
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.5, 260.2) P1(318.0, 271.0), P2(297.0, 271.0), P3(296.0, 251.0), P4(319.0, 248.0)  
+aruco_ratio 0.0015737509727478027
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(305.2, 258.5) P1(316.0, 269.0), P2(295.0, 269.0), P3(295.0, 248.0), P4(315.0, 248.0)  
+aruco_ratio 0.001437173585096995
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(304.2, 257.8) P1(315.0, 269.0), P2(293.0, 269.0), P3(293.0, 248.0), P4(316.0, 245.0)  
+aruco_ratio 0.0017202413082122803
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(302.8, 262.2) P1(313.0, 274.0), P2(292.0, 274.0), P3(291.0, 252.0), P4(315.0, 249.0)  
+aruco_ratio 0.001714444359143575
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(302.0, 270.2) P1(313.0, 281.0), P2(291.0, 282.0), P3(291.0, 259.0), P4(313.0, 259.0)  
+aruco_ratio 0.0015771475434303284
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(304.5, 273.5) P1(316.0, 285.0), P2(293.0, 285.0), P3(293.0, 262.0), P4(316.0, 262.0)  
+aruco_ratio 0.0017220052083333334
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(306.0, 275.0) P1(317.0, 287.0), P2(294.0, 288.0), P3(294.0, 264.0), P4(319.0, 261.0)  
+aruco_ratio 0.0019542096058527626
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(307.0, 274.0) P1(319.0, 286.0), P2(295.0, 287.0), P3(294.0, 263.0), P4(320.0, 260.0)  
+aruco_ratio 0.0020345157384872438
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(309.5, 271.0) P1(322.0, 283.0), P2(298.0, 283.0), P3(297.0, 259.0), P4(321.0, 259.0)  
+aruco_ratio 0.0018766268094380697
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(310.8, 265.8) P1(323.0, 279.0), P2(298.0, 279.0), P3(297.0, 254.0), P4(325.0, 251.0)  
+aruco_ratio 0.002284451325734456
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(309.5, 267.2) P1(322.0, 281.0), P2(296.0, 281.0), P3(296.0, 255.0), P4(324.0, 252.0)  
+aruco_ratio 0.0024602570136388145
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(311.5, 265.8) P1(325.0, 280.0), P2(297.0, 280.0), P3(297.0, 253.0), P4(327.0, 250.0)  
+aruco_ratio 0.0027404447396596272
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(312.2, 261.0) P1(326.0, 276.0), P2(298.0, 276.0), P3(297.0, 248.0), P4(328.0, 244.0)  
+aruco_ratio 0.002922357718149821
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(318.5, 261.5) P1(334.0, 276.0), P2(304.0, 277.0), P3(303.0, 247.0), P4(333.0, 246.0)  
+aruco_ratio 0.0029329429070154827
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(320.0, 260.5) P1(336.0, 278.0), P2(303.0, 278.0), P3(302.0, 245.0), P4(339.0, 241.0)  
+aruco_ratio 0.003987652858098348
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(355.8, 213.0) P1(391.0, 249.0), P2(321.0, 250.0), P3(318.0, 180.0), P4(393.0, 173.0)  
+aruco_ratio 0.01732547124226888
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(356.2, 212.0) P1(392.0, 248.0), P2(321.0, 250.0), P3(319.0, 179.0), P4(393.0, 171.0)  
+aruco_ratio 0.01780478318532308
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(357.0, 213.8) P1(393.0, 250.0), P2(322.0, 251.0), P3(319.0, 181.0), P4(394.0, 173.0)  
+aruco_ratio 0.017799490292867023
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(356.8, 215.8) P1(392.0, 252.0), P2(322.0, 253.0), P3(319.0, 183.0), P4(394.0, 175.0)  
+aruco_ratio 0.017553281784057618
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(356.8, 215.2) P1(392.0, 251.0), P2(322.0, 253.0), P3(319.0, 182.0), P4(394.0, 175.0)  
+aruco_ratio 0.0173307736714681
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(354.2, 213.8) P1(390.0, 250.0), P2(319.0, 251.0), P3(317.0, 181.0), P4(391.0, 173.0)  
+aruco_ratio 0.017799490292867023
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(356.0, 215.2) P1(391.0, 251.0), P2(321.0, 253.0), P3(318.0, 182.0), P4(394.0, 175.0)  
+aruco_ratio 0.017338267962137856
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(355.2, 215.0) P1(391.0, 251.0), P2(320.0, 253.0), P3(318.0, 182.0), P4(392.0, 174.0)  
+aruco_ratio 0.01780478318532308
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  3  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(354.8, 214.5) P1(391.0, 251.0), P2(319.0, 252.0), P3(317.0, 181.0), P4(392.0, 174.0)  
+aruco_ratio 0.018050136566162108
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(355.0, 214.5) P1(391.0, 251.0), P2(319.0, 252.0), P3(317.0, 181.0), P4(393.0, 174.0)  
+aruco_ratio 0.0180547030766805
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(355.0, 214.5) P1(391.0, 251.0), P2(319.0, 252.0), P3(317.0, 181.0), P4(393.0, 174.0)  
+aruco_ratio 0.0180547030766805
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(355.0, 214.5) P1(391.0, 251.0), P2(319.0, 252.0), P3(317.0, 181.0), P4(393.0, 174.0)  
+aruco_ratio 0.0180547030766805
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(354.5, 214.5) P1(390.0, 251.0), P2(319.0, 252.0), P3(317.0, 181.0), P4(392.0, 174.0)  
+aruco_ratio 0.017803991635640462
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(354.5, 214.5) P1(390.0, 251.0), P2(319.0, 252.0), P3(317.0, 181.0), P4(392.0, 174.0)  
+aruco_ratio 0.017803991635640462
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(352.5, 213.5) P1(388.0, 250.0), P2(317.0, 251.0), P3(315.0, 180.0), P4(390.0, 173.0)  
+aruco_ratio 0.017803991635640462
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(351.8, 213.2) P1(388.0, 250.0), P2(316.0, 251.0), P3(314.0, 180.0), P4(389.0, 172.0)  
+aruco_ratio 0.0182845147450765
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(351.8, 213.2) P1(388.0, 250.0), P2(316.0, 251.0), P3(314.0, 180.0), P4(389.0, 172.0)  
+aruco_ratio 0.0182845147450765
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(353.0, 215.0) P1(389.0, 251.0), P2(317.0, 253.0), P3(315.0, 181.0), P4(391.0, 175.0)  
+aruco_ratio 0.017825539906819662
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(352.8, 215.2) P1(389.0, 252.0), P2(317.0, 253.0), P3(315.0, 182.0), P4(390.0, 174.0)  
+aruco_ratio 0.0182845147450765
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(349.8, 213.8) P1(386.0, 250.0), P2(314.0, 252.0), P3(311.0, 180.0), P4(388.0, 173.0)  
+aruco_ratio 0.018059924443562827
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(349.0, 214.2) P1(385.0, 251.0), P2(313.0, 252.0), P3(311.0, 181.0), P4(387.0, 173.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(348.5, 214.5) P1(385.0, 251.0), P2(313.0, 253.0), P3(310.0, 181.0), P4(386.0, 173.0)  
+aruco_ratio 0.018289804458618164
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(347.0, 214.2) P1(383.0, 251.0), P2(311.0, 252.0), P3(309.0, 181.0), P4(385.0, 173.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(348.0, 214.2) P1(384.0, 251.0), P2(312.0, 252.0), P3(310.0, 181.0), P4(386.0, 173.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(348.5, 215.2) P1(384.0, 252.0), P2(312.0, 253.0), P3(310.0, 181.0), P4(388.0, 175.0)  
+aruco_ratio 0.018072951634724936
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(347.0, 214.0) P1(383.0, 251.0), P2(311.0, 252.0), P3(309.0, 180.0), P4(385.0, 173.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(348.0, 214.0) P1(384.0, 251.0), P2(312.0, 252.0), P3(310.0, 180.0), P4(386.0, 173.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(347.8, 214.2) P1(384.0, 251.0), P2(312.0, 252.0), P3(310.0, 181.0), P4(385.0, 173.0)  
+aruco_ratio 0.0182845147450765
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(347.8, 214.5) P1(384.0, 252.0), P2(312.0, 252.0), P3(310.0, 181.0), P4(385.0, 173.0)  
+aruco_ratio 0.018517109553019207
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(346.2, 214.2) P1(383.0, 251.0), P2(310.0, 252.0), P3(308.0, 181.0), P4(384.0, 173.0)  
+aruco_ratio 0.018538419405619302
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(345.5, 214.2) P1(382.0, 251.0), P2(309.0, 252.0), P3(307.0, 181.0), P4(384.0, 173.0)  
+aruco_ratio 0.01854298750559489
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(345.2, 214.5) P1(382.0, 251.0), P2(309.0, 253.0), P3(307.0, 181.0), P4(383.0, 173.0)  
+aruco_ratio 0.01854363441467285
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(345.0, 214.2) P1(381.0, 251.0), P2(309.0, 252.0), P3(307.0, 181.0), P4(383.0, 173.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(346.2, 215.0) P1(382.0, 252.0), P2(310.0, 253.0), P3(309.0, 181.0), P4(384.0, 174.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(346.0, 215.2) P1(382.0, 252.0), P2(310.0, 253.0), P3(308.0, 182.0), P4(384.0, 174.0)  
+aruco_ratio 0.018289020856221517
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(344.0, 215.0) P1(379.0, 252.0), P2(308.0, 253.0), P3(307.0, 181.0), P4(382.0, 174.0)  
+aruco_ratio 0.018042462666829427
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(346.5, 215.8) P1(382.0, 252.0), P2(311.0, 254.0), P3(309.0, 182.0), P4(384.0, 175.0)  
+aruco_ratio 0.017809287707010905
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(346.5, 215.0) P1(382.0, 252.0), P2(311.0, 253.0), P3(309.0, 181.0), P4(384.0, 174.0)  
+aruco_ratio 0.018035057385762533
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(347.0, 215.5) P1(382.0, 252.0), P2(311.0, 253.0), P3(309.0, 181.0), P4(386.0, 176.0)  
+aruco_ratio 0.017591161727905272
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(347.0, 215.2) P1(383.0, 252.0), P2(312.0, 253.0), P3(309.0, 182.0), P4(384.0, 174.0)  
+aruco_ratio 0.01803061326344808
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(345.2, 215.0) P1(381.0, 252.0), P2(310.0, 253.0), P3(307.0, 181.0), P4(383.0, 174.0)  
+aruco_ratio 0.018035057385762533
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(346.8, 213.0) P1(384.0, 250.0), P2(311.0, 251.0), P3(308.0, 179.0), P4(384.0, 172.0)  
+aruco_ratio 0.018536895116170248
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(345.8, 212.0) P1(382.0, 249.0), P2(309.0, 250.0), P3(306.0, 178.0), P4(386.0, 171.0)  
+aruco_ratio 0.018561253547668456
+命令 a
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(336.2, 212.8) P1(372.0, 249.0), P2(300.0, 251.0), P3(298.0, 179.0), P4(375.0, 172.0)  
+aruco_ratio 0.018067533175150554
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(322.8, 213.0) P1(360.0, 250.0), P2(286.0, 251.0), P3(284.0, 179.0), P4(361.0, 172.0)  
+aruco_ratio 0.018792322476704915
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(322.0, 213.5) P1(359.0, 251.0), P2(286.0, 252.0), P3(283.0, 179.0), P4(360.0, 172.0)  
+aruco_ratio 0.018776052792867023
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(321.5, 213.0) P1(358.0, 251.0), P2(285.0, 251.0), P3(283.0, 178.0), P4(360.0, 172.0)  
+aruco_ratio 0.018778802553812663
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(324.2, 214.5) P1(361.0, 252.0), P2(288.0, 253.0), P3(285.0, 180.0), P4(363.0, 173.0)  
+aruco_ratio 0.018780563672383625
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(324.8, 213.2) P1(362.0, 250.0), P2(288.0, 252.0), P3(286.0, 179.0), P4(363.0, 172.0)  
+aruco_ratio 0.018797467549641927
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(320.5, 129.5) P1(323.0, 132.0), P2(318.0, 132.0), P3(318.0, 127.0), P4(323.0, 127.0)  
+aruco_ratio 8.138020833333333e-05
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  Marker 33: C(324.2, 212.8) P1(362.0, 250.0), P2(287.0, 251.0), P3(285.0, 179.0), P4(363.0, 171.0)  
+aruco_ratio 0.019290370941162108
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(322.8, 213.2) P1(360.0, 251.0), P2(286.0, 252.0), P3(284.0, 179.0), P4(361.0, 171.0)  
+aruco_ratio 0.019274099667867025
+命令 w
+状态码 mmmmmmmmmmmmmmmmmm  命令 m
+状态码 mmmmmmmmmmmmmmmmmm  丢失目标 33 正在调整
+1  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  2  运动指令 q
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  进入前进状态，寻找目标 33
+Marker 33: C(325.0, 210.2) P1(363.0, 249.0), P2(287.0, 249.0), P3(285.0, 175.0), P4(365.0, 168.0)  
+aruco_ratio 0.02004517078399658
+命令 m
+状态码 mmmmmmmmmmmmmmmmmm  投喂目标 33
+状态码 mmmmmmmmmmmmmmmmmm  进入检测状态
+命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q
+状态码 mmmmmmmmmmmmmmmmmm  命令 q

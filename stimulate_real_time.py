@@ -3,12 +3,13 @@ import cv2
 import struct
 import time
 
-def send_image(conn, img):
+def send_image(conn, img,status_code):
     img_encoded = cv2.imencode('.jpg', img)[1]
     data = img_encoded.tobytes()
     retries = 5
     conn.sendall(struct.pack("<L", len(data)))
     conn.sendall(data)
+    conn.sendall(status_code.encode())
 
 def main():
     server_address = ('localhost', 5001)
@@ -27,7 +28,8 @@ def main():
                 print("Error: Unable to capture frame")
                 break
             if frame is not None:
-                send_image(sender_socket, frame)
+                send_image(sender_socket, frame,"a")
+                
                 time.sleep(0.1)  # 每隔1秒发送一次
                 # 接收运动命令
                 motion_command = sender_socket.recv(1024).decode()
